@@ -5,7 +5,6 @@ import random
 # from google.oauth2.service_account import Credentials
 # import gspread
 # from gspread_dataframe import get_as_dataframe, set_with_dataframe
-!pip install -r requirements.txt
 import folium
 from streamlit_folium import folium_static
 from PIL import Image
