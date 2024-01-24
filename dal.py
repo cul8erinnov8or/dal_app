@@ -38,7 +38,7 @@ q3 = st.selectbox(label = '重視するのは？', options = ['ガッツリ', '�
 button = st.button('送信')
 
 # df_read = get_as_dataframe(worksheet)
-df_read = pd.read_csv('dal.csv', dtype = str)
+df_read = pd.read_csv('dal.csv')
 df_read = df_read.dropna(subset = 'id').copy()
 
 dal_loc = [35.65918493355944, 139.75321656558702]
