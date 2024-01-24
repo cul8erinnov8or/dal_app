@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import random
-from google.oauth2.service_account import Credentials
-import gspread
-from gspread_dataframe import get_as_dataframe, set_with_dataframe
+# from google.oauth2.service_account import Credentials
+# import gspread
+# from gspread_dataframe import get_as_dataframe, set_with_dataframe
 import folium
 from streamlit_folium import folium_static
 from PIL import Image
