@@ -12,20 +12,20 @@ from datetime import datetime
 import time
 from geopy.distance import geodesic
 
-scopes = [
-    'https://www.googleapis.com/auth/spreadsheets',
-    'https://www.googleapis.com/auth/drive'
-]
+# scopes = [
+#     'https://www.googleapis.com/auth/spreadsheets',
+#     'https://www.googleapis.com/auth/drive'
+# ]
 
-credentials = Credentials.from_service_account_file(
-    'C:/Users/eplci/Downloads/pivotal-sprite-406613-761b24952379.json',
-    scopes=scopes
-)
+# credentials = Credentials.from_service_account_file(
+#     'C:/Users/eplci/Downloads/pivotal-sprite-406613-761b24952379.json',
+#     scopes=scopes
+# )
 
-gc = gspread.authorize(credentials)
-spreadsheet_url = '(https://docs.google.com/spreadsheets/d/1sUX1ad891fYIIGrQzPTmXBgEfsaI-8T5zVv8bp5AbIc/edit#gid=0)'
-spreadsheet = gc.open_by_url(spreadsheet_url)
-worksheet = spreadsheet.sheet1
+# gc = gspread.authorize(credentials)
+# spreadsheet_url = '(https://docs.google.com/spreadsheets/d/1sUX1ad891fYIIGrQzPTmXBgEfsaI-8T5zVv8bp5AbIc/edit#gid=0)'
+# spreadsheet = gc.open_by_url(spreadsheet_url)
+# worksheet = spreadsheet.sheet1
 
 
 st.title('昼飯どうする？')
@@ -37,7 +37,8 @@ q2 = st.selectbox(label = '何系食べたい？', options = ['こだわらな�
 q3 = st.selectbox(label = '重視するのは？', options = ['ガッツリ', 'おしゃれ', 'コスパ'])
 button = st.button('送信')
 
-df_read = get_as_dataframe(worksheet)
+# df_read = get_as_dataframe(worksheet)
+df_read = pd.read_csv('dal.csv', dtype = str)
 df_read = df_read.dropna(subset = 'id').copy()
 
 dal_loc = [35.65918493355944, 139.75321656558702]
