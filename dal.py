@@ -12,21 +12,6 @@ from datetime import datetime
 import time
 from geopy.distance import geodesic
 
-# scopes = [
-#     'https://www.googleapis.com/auth/spreadsheets',
-#     'https://www.googleapis.com/auth/drive'
-# ]
-
-# credentials = Credentials.from_service_account_file(
-#     'C:/Users/eplci/Downloads/pivotal-sprite-406613-761b24952379.json',
-#     scopes=scopes
-# )
-
-# gc = gspread.authorize(credentials)
-# spreadsheet_url = '(https://docs.google.com/spreadsheets/d/1sUX1ad891fYIIGrQzPTmXBgEfsaI-8T5zVv8bp5AbIc/edit#gid=0)'
-# spreadsheet = gc.open_by_url(spreadsheet_url)
-# worksheet = spreadsheet.sheet1
-
 
 st.title('昼飯どうする？')
 st.header('そんなあなたに、昼飯決める君！！！！')
